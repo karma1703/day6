@@ -8,31 +8,13 @@ function App() {
 
   const [count, setCount] = useState(0)
 
-  const incrementClick = () => {
-    setCount((prev) => {
-      return prev + 1
-    })
-  } 
 
-  console.log("render");
-
-  const decrimentClick = () =>{
-    setCount((prev) => {
-      return prev - 1
-    })
-  }
 
   return (
     <div className="App">
-      <Header /> 
+      <Header countInHeader={count} /> 
 
-      <hr />
-      {count}
-      <hr />
-
-      <button onClick={incrementClick}>Plus one</button>
-      <button onClick={decrimentClick}>Minus one</button>
-      <Main />
+      <Main setCount={setCount}/>
 
       <Footer />
     </div>
