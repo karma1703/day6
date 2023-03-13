@@ -1,7 +1,9 @@
+import styles from './footer.module.css'
+
 export const Footer = () => {
 
 
     return (
-        <footer>Footer</footer>
+        <footer className={styles.wrapper}>Footer</footer>
     )
 }
